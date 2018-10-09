@@ -30,7 +30,7 @@ if test -f /usr/local/share/chk/chk.fish
 end
 ```
 
-Then select the wanted Terraform version to use with `chk`.
+Then select the wanted Kubectl version to use with `chk`.
 
     chk 1.11.3
 

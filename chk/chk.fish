@@ -78,7 +78,7 @@ function _chk_use -a k_version
 end
 
 function _chk_list
-    for dir in $CASKROOM/terraform-*/*
+    for dir in $CASKROOM/kubernetes-cli-*/*
         set -l prefix (_chk_list_prefix $dir)
         set -l k_version (basename $dir)
         echo -s $prefix $k_version
