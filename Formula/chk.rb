@@ -2,8 +2,8 @@ class Chk < Formula
   desc 'Kubectl version switcher'
   homepage 'https://github.com/Vlatombe/homebrew-kubectls#readme'
 
-  url 'https://github.com/Vlatombe/homebrew-kubectls/archive/v1.0.0.tar.gz'
-  sha256 'a331c5b5663b49f40b79ca9f2894d4903459fd798b94ee97833e0a4a7c6120c7'
+  url 'https://github.com/Vlatombe/homebrew-kubectls/archive/v1.0.1.tar.gz'
+  sha256 '0e5a3d49d89a0b044bbb565b38de010704d748e4e82da3a9998e2158ca7a97ff'
 
   head 'https://github.com/Vlatombe/homebrew-kubectls.git'
 
