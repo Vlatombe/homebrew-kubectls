@@ -59,14 +59,14 @@ function _chk_install
 end
 
 function _chk_use -a k_version
-    set -l k_path $CASKROOM/kubernetes-cli-$k_version/$k_version
+    set -l k_path $CASKROOM/kubernetes-cli-$k_version/$k_version/kubernetes/client/bin
 
     if not test -d $k_path
         _chk_install $k_version; or return 1
     end
 
-    if not test -x $k_path/kubernetes/client/bin/kubectl
-        echo "chk: $k_path/kubernetes/client/bin/kubectl not executable" >&2
+    if not test -x $k_path/kubectl
+        echo "chk: $k_path/kubectl not executable" >&2
         return 1
     end
 

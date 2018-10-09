@@ -60,12 +60,12 @@ _chk_install() {
 }
 
 _chk_use() {
-    local k_path="$CASKROOM/kubernetes-cli-$1/$1"
+    local k_path="$CASKROOM/kubernetes-cli-$1/$1/kubernetes/client/bin"
 
     [[ -d "$k_path" ]] || _chk_install "$1" || return 1
 
-    if [[ ! -x "$k_path/kubernetes/client/bin/kubectl" ]]; then
-        echo "chk: $k_path/kubernetes/client/bin/kubectl not executable" >&2
+    if [[ ! -x "$k_path/kubectl" ]]; then
+        echo "chk: $k_path/kubectl not executable" >&2
         return 1
     fi
 
