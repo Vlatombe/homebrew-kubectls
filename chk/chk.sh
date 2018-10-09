@@ -64,8 +64,8 @@ _chk_use() {
 
     [[ -d "$k_path" ]] || _chk_install "$1" || return 1
 
-    if [[ ! -x "$k_path/kubectl" ]]; then
-        echo "chk: $k_path/kubectl not executable" >&2
+    if [[ ! -x "$k_path/kubernetes/client/bin/kubectl" ]]; then
+        echo "chk: $k_path/kubernetes/client/bin/kubectl not executable" >&2
         return 1
     fi
 
