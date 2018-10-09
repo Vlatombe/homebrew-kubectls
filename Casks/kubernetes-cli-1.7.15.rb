@@ -1,9 +1,8 @@
-cask 'kubernetes-cli-1.8.15' do
-    version '1.8.15'
-    sha256 '01b1c22d8d894645ee80dd4e0639f2c1f401583150185cdf43d61cafc1ce3b78'
+cask 'kubernetes-cli-1.7.15' do
+    version '1.7.15'
+    sha256 '48a97b11ffa156fe9a5f751dd6a6a1c9a031a2394080f543571ab3fb97d5ef60'
     
     url "https://dl.k8s.io/v#{version}/kubernetes-client-darwin-amd64.tar.gz"
     name 'Kubernetes Client'
     homepage 'https://kubernetes.io/'
 end
-  

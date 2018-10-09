@@ -5,5 +5,5 @@ cask 'kubernetes-cli-1.10.8' do
     url "https://dl.k8s.io/v#{version}/kubernetes-client-darwin-amd64.tar.gz"
     name 'Kubernetes Client'
     homepage 'https://kubernetes.io/'
-  end
+end
   

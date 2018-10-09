@@ -1,0 +1,42 @@
+#!/bin/bash -eu
+
+all_releases() {
+    # Retrieves the first page but should be enough
+    curl -sL https://api.github.com/repos/kubernetes/kubernetes/releases | jq -r '.[].name' | grep -v -E "rc|beta|alpha"
+}
+
+generate_version() {
+    local version="${1:?}"
+    if [ ! -f Casks/kubernetes-cli-$version.rb ]; then
+        echo "kubernetes-cli-$version..."
+        tmpfile=$(mktemp)
+        wget -nv -O $tmpfile https://dl.k8s.io/v$version/kubernetes-client-darwin-amd64.tar.gz
+        sha256=$(shasum -a 256 $tmpfile | cut -f 1 -d " ")
+        rm -f $tmpfile
+        cat << EOF > Casks/kubernetes-cli-$version.rb
+cask 'kubernetes-cli-$version' do
+    version '$version'
+    sha256 '$sha256'
+    
+    url "https://dl.k8s.io/v#{version}/kubernetes-client-darwin-amd64.tar.gz"
+    name 'Kubernetes Client'
+    homepage 'https://kubernetes.io/'
+end
+EOF
+        echo "kubernetes-cli-$version... done"
+    else
+        echo "kubernetes-cli-$version... already exists"
+    fi
+}
+
+if [ $# -gt 0 ]; then
+    releases="$@"
+else
+    releases="$(all_releases)"
+fi
+
+for r in $releases; do
+    # Remove leading v
+    version="${r#"v"}" 
+    generate_version $version
+done
