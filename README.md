@@ -1,6 +1,6 @@
 # chk - Kubectl version switcher
 
-This repository includes Homebrew Casks to install multiple Kubectl versions (since 1.9) at the same time, and a `chk` helper to specify which one to use. `chk` also installs the specified version automatically if needed.
+This repository includes Homebrew Casks to install multiple Kubectl versions (since 1.8) at the same time, and a `chk` helper to specify which one to use. `chk` also installs the specified version automatically if needed.
 
 ## Usage
 
