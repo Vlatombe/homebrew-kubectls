@@ -3,7 +3,7 @@ class Chk < Formula
   homepage 'https://github.com/Vlatombe/homebrew-kubectls#readme'
 
   url 'https://github.com/Vlatombe/homebrew-kubectls/archive/v1.0.0.tar.gz'
-  sha256 '78f58d65d7af4d102537e2d84b9b9cba5acd27c07c1b12835571727a4288e15d'
+  sha256 '8302c4ee6f67bbbef399a5d54b33bbfd6d011b106987ea4080121eb263941f30'
 
   head 'https://github.com/Vlatombe/homebrew-kubectls.git'
 
