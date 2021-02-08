@@ -2,7 +2,7 @@
 
 all_releases() {
     # Retrieves the first page but should be enough
-    curl -sL https://api.github.com/repos/kubernetes/kubernetes/releases | jq -r '.[].name' | grep -v -E "rc|beta|alpha"
+    curl -sL https://api.github.com/repos/kubernetes/kubernetes/releases | jq -r '.[].tag_name' | grep -v -E "rc|beta|alpha"
 }
 
 generate_version() {
