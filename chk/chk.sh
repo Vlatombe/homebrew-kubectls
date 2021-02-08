@@ -56,7 +56,7 @@ _chk_reset() {
 
 _chk_install() {
     echo "chk: Installing Kubectl version $1"
-    brew cask install "kubernetes-cli-$1"
+    brew install "kubernetes-cli-$1"
 }
 
 _chk_use() {

@@ -55,7 +55,7 @@ end
 
 function _chk_install
     echo "chk: Installing Kubectl version $argv[1]"
-    brew cask install "kubernetes-cli-$argv[1]"
+    brew install "kubernetes-cli-$argv[1]"
 end
 
 function _chk_use -a k_version
