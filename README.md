@@ -36,7 +36,7 @@ Then select the wanted Kubectl version to use with `chk`.
 
 You can also just install a specific Kubectl version (but you'll need to use `chk` or adjust `PATH` yourself to use it):
 
-    brew cask install kubernetes-cli-1.11.3
+    brew install --cask kubernetes-cli-1.11.3
 
 ## Credits
 
